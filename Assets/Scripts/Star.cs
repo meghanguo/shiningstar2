@@ -286,9 +286,15 @@ public class Star : MonoBehaviour
             foreach (GameObject starObject in starObjects)
             {
                 StarInfo starInfo = starObject.GetComponent<StarInfo>();
-                starObject.transform.Translate(Vector3.right * starInfo.vx * Time.deltaTime);
-                starObject.transform.Translate(Vector3.up * starInfo.vz * Time.deltaTime);
-                starObject.transform.Translate(Vector3.forward * starInfo.vy * Time.deltaTime);
+                Vector3 newPosition = starObject.transform.position;
+                newPosition.x += starInfo.vx * Time.deltaTime;
+                newPosition.y += starInfo.vz * Time.deltaTime;
+                newPosition.z += starInfo.vy * Time.deltaTime;
+                starObject.transform.position = newPosition;
+                //starObject.transform.position = starObject.transform.position + new Vector3(Vector3.right * starInfo.vx * Time.deltaTime, star.z0 + 1, star.y0);
+                //starObject.transform.Translate(Vector3.right * starInfo.vx * Time.deltaTime);
+                //starObject.transform.Translate(Vector3.up * starInfo.vz * Time.deltaTime);
+                //starObject.transform.Translate(Vector3.forward * starInfo.vy * Time.deltaTime);
             }
         }
         else if (movement == 2)
@@ -297,9 +303,15 @@ public class Star : MonoBehaviour
             foreach (GameObject starObject in starObjects)
             {
                 StarInfo starInfo = starObject.GetComponent<StarInfo>();
-                starObject.transform.Translate(Vector3.right * starInfo.vx * Time.deltaTime * -1);
-                starObject.transform.Translate(Vector3.up * starInfo.vz * Time.deltaTime * -1);
-                starObject.transform.Translate(Vector3.forward * starInfo.vy * Time.deltaTime * -1);
+                Vector3 newPosition = starObject.transform.position;
+                newPosition.x += starInfo.vx * Time.deltaTime * -1;
+                newPosition.y += starInfo.vz * Time.deltaTime * -1;
+                newPosition.z += starInfo.vy * Time.deltaTime * -1;
+                starObject.transform.position = newPosition;
+                //StarInfo starInfo = starObject.GetComponent<StarInfo>();
+                //starObject.transform.Translate(Vector3.right * starInfo.vx * Time.deltaTime * -1);
+                //starObject.transform.Translate(Vector3.up * starInfo.vz * Time.deltaTime * -1);
+                //starObject.transform.Translate(Vector3.forward * starInfo.vy * Time.deltaTime * -1);
             }
         }
         if (movement == 1 || movement == 2)
