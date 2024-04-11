@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: d5a9d9a40e32941aaaa99e9ccf4f1d65
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - constellationMenu: {instanceID: 0}
+  - exoplanetMenu: {instanceID: 0}
+  - starPrefab: {instanceID: 0}
+  - starShader: {instanceID: 0}
+  - linePrefab: {instanceID: 0}
+  - constellationShader: {instanceID: 0}
+  - menu: {instanceID: 0}
+  - menu2: {instanceID: 0}
+  - togglePrefab: {instanceID: 0}
+  - navController: {instanceID: 0}
+  - evolutionMenu: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
